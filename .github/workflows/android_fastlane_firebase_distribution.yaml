@@ -23,11 +23,13 @@ jobs:
         with:
           channel: stable
 
-      - name: Setup Ruby and Fastlane
+      - name: Setup Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2.3"
           bundler-cache: true
+
+      - name: Install Dependencies
         run: |
           gem install bundler
           bundle install
