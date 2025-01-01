@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "409716284527",
+    "project_id": "flutter-advanced-dev-fox",
+    "storage_bucket": "flutter-advanced-dev-fox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409716284527:android:b7bcb6bca1ed030c27819a",
+        "android_client_info": {
+          "package_name": "dev.fox.eslammongy.flutter_advanced"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUnx92wL71W6uoNnHgVsuNhynytBkq7PE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409716284527:android:aad6cbe1334fe47627819a",
+        "android_client_info": {
+          "package_name": "dev.fox.flutter.advanced"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUnx92wL71W6uoNnHgVsuNhynytBkq7PE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
