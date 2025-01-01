@@ -43,3 +43,32 @@ jobs:
         run: |
           bundle exec fastlane android firebase_distribution
         working-directory: android
+
+  upload_to_github_release:
+    needs: distribute_to_firebase
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Upload Release APK
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: android/app/build/outputs/apk/release/app-release.apk
+          asset_name: app-release.apk
+          asset_content_type: application/vnd.android.package-archive
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: "v1.0.0" # Update dynamically for each release
+          release_name: "Release v1.0.0"
+          body: |
+            APK release for version 1.0.0
+            - Uploaded automatically by GitHub Actions.
+          draft: false
+          prerelease: false
